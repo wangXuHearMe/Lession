@@ -1,0 +1,6 @@
+module Pods_learnSwift {
+  umbrella header "Pods-learnSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
