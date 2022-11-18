@@ -20,25 +20,29 @@ class LoginViewController: UIViewController {
   private var sureButton: UIButton = {
     let btn = UIButton()
     btn.setTitle("登陆", for: .normal)
-    btn.layer.cornerRadius = 10
+    btn.layer.cornerRadius = 20
     btn.setTitleColor(UIColor.black, for: .normal)
     btn.addTarget(self, action: #selector(touchSure), for: .touchUpInside)
+    btn.backgroundColor = .systemCyan
     return btn
   }()
 
   private var registeredButton: UIButton = {
     let btn = UIButton()
     btn.setTitle("注册", for: .normal)
-    btn.layer.cornerRadius = 10
+    btn.layer.cornerRadius = 20
     btn.setTitleColor(UIColor.black, for: .normal)
+    btn.addTarget(self, action: #selector(touchRegister), for: .touchUpInside)
+    btn.backgroundColor = .systemIndigo
     return btn
   }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.isNavigationBarHidden = true
     setupUI()
   }
-  
+
   func setupUI() {
     view.backgroundColor = .white
     view.addSubview(backgroundView)
@@ -48,7 +52,7 @@ class LoginViewController: UIViewController {
       make.width.equalTo(300)
       make.height.equalTo(100)
     }
-    
+
     backgroundView.addSubview(loginAvaterView)
     loginAvaterView.snp.makeConstraints { make in
       make.left.right.equalToSuperview()
@@ -79,8 +83,14 @@ class LoginViewController: UIViewController {
   }
 
   @objc func touchSure() {
-    let viewController = ViewController()
-    self.present(viewController, animated: true)
+    let vc = MainViewController()
+    vc.modalPresentationStyle = .fullScreen
+    present(vc, animated: true)
+  }
+
+  @objc func touchRegister() {
+    let vc = RegisterViewController()
+    self.navigationController?.pushViewController(vc, animated: true)
   }
 }
 
