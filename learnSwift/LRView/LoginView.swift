@@ -21,15 +21,13 @@ class LoginView: UIView, UITextFieldDelegate {
   var type: nowType = .avater
   var leftImageView = UIButton()
 
-  private var textFiled: UITextField = {
+  open var textFiled: UITextField = {
     let e = UITextField()
     e.clearButtonMode = .whileEditing
     e.adjustsFontSizeToFitWidth = true
     e.keyboardType = .default
     e.returnKeyType = .done
     e.textColor = .black
-    e.isEnabled = true
-    e.isUserInteractionEnabled = true
     return e
   }()
 
@@ -61,6 +59,7 @@ class LoginView: UIView, UITextFieldDelegate {
 
     backgroundView.addSubview(textFiled)
     textFiled.delegate = self
+
     textFiled.snp.makeConstraints { make in
       make.left.equalTo(leftImageView.snp.right).offset(5)
       make.top.bottom.right.equalTo(backgroundView)
@@ -75,10 +74,6 @@ class LoginView: UIView, UITextFieldDelegate {
       textFiled.placeholder = "密码"
       textFiled.isSecureTextEntry = true
     }
-  }
-
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    textFiled.resignFirstResponder()
   }
 
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {

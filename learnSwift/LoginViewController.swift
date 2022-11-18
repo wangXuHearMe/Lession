@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
   private var backgroundView: UIView = {
     let view = UIView()
     view.backgroundColor = .clear
@@ -57,12 +57,14 @@ class LoginViewController: UIViewController {
     loginAvaterView.snp.makeConstraints { make in
       make.left.right.equalToSuperview()
       make.top.equalToSuperview()
+      make.height.equalTo(45)
     }
 
     backgroundView.addSubview(loginPasswordView)
     loginPasswordView.snp.makeConstraints { make in
-      make.top.equalTo(loginAvaterView).offset(55)
+      make.top.equalTo(loginAvaterView.snp_bottom).offset(10)
       make.left.right.equalToSuperview()
+      make.height.equalTo(45)
     }
 
     view.addSubview(sureButton)
@@ -91,6 +93,11 @@ class LoginViewController: UIViewController {
   @objc func touchRegister() {
     let vc = RegisterViewController()
     self.navigationController?.pushViewController(vc, animated: true)
+  }
+
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    loginAvaterView.textFiled.endEditing(true)
+    loginPasswordView.textFiled.endEditing(true)
   }
 }
 

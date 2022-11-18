@@ -49,18 +49,21 @@ class RegisterViewController: UIViewController {
     backgroundView.addSubview(registerAvaterView)
     registerAvaterView.snp.makeConstraints { make in
       make.top.left.right.equalTo(backgroundView)
+      make.height.equalTo(45)
     }
 
     backgroundView.addSubview(registerPasswordView)
     registerPasswordView.snp.makeConstraints { make in
-      make.top.equalTo(registerAvaterView.snp_bottom).offset(60)
+      make.top.equalTo(registerAvaterView.snp_bottom).offset(15)
       make.left.right.equalTo(backgroundView)
+      make.height.equalTo(45)
     }
 
     backgroundView.addSubview(surePasswordView)
     surePasswordView.snp.makeConstraints { make in
-      make.top.equalTo(registerPasswordView.snp_bottom).offset(60)
+      make.top.equalTo(registerPasswordView.snp_bottom).offset(15)
       make.left.right.equalTo(backgroundView)
+      make.height.equalTo(45)
     }
 
     view.addSubview(registerButton)
@@ -82,5 +85,11 @@ class RegisterViewController: UIViewController {
 
   @objc func touchRegister() {
 
+  }
+
+  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    registerAvaterView.textFiled.endEditing(true)
+    registerPasswordView.textFiled.endEditing(true)
+    surePasswordView.textFiled.endEditing(true)
   }
 }

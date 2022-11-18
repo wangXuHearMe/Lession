@@ -21,7 +21,7 @@ class RegisterView: UIView, UITextFieldDelegate {
   var leftImageView = UIButton()
   var errorImageView = UIButton()
 
-  private var textFiled: UITextField = {
+  open var textFiled: UITextField = {
     let e = UITextField()
     e.clearButtonMode = .whileEditing
     e.adjustsFontSizeToFitWidth = true
@@ -90,10 +90,6 @@ class RegisterView: UIView, UITextFieldDelegate {
     }
   }
 
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    textFiled.resignFirstResponder()
-  }
-
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     textField.resignFirstResponder()
     return true
@@ -101,11 +97,6 @@ class RegisterView: UIView, UITextFieldDelegate {
 
   func textFieldShouldClear(_ textField: UITextField) -> Bool {
     true
-  }
-
-  func changeImageView() {
-    leftImageView.isHidden = true
-    errorImageView.isHidden = false
   }
 
   enum nowType {
