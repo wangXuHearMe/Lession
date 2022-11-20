@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     view.dataSource = self
     view.delegate = self
     view.backgroundColor = .white
+    view.register(demoTableViewCell.self, forCellReuseIdentifier: "demo")
     return view
   }()
 
@@ -43,11 +44,17 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    1
+    5
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    100
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell.init(style: .default, reuseIdentifier: "1")
+//    let cell = UITableViewCell.init(style: .default, reuseIdentifier: "demo")
+    let cell: demoTableViewCell = tableView.dequeueReusableCell(withIdentifier: "demo", for: indexPath) as! demoTableViewCell
+    cell.senderUI()
     return cell
   }
 }
