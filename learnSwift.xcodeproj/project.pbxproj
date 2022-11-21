@@ -14,6 +14,7 @@
 		2B3BBB7029279D0B00743373 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB6F29279D0B00743373 /* MainViewController.swift */; };
 		2B3BBB7329279E4300743373 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB7229279E4300743373 /* MainHeaderView.swift */; };
 		2B3BBB77292A938900743373 /* demoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB76292A938800743373 /* demoTableViewCell.swift */; };
+		2B3BBB79292B3FBC00743373 /* demoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB78292B3FBC00743373 /* demoTextView.swift */; };
 		2B9099622914B897005F47F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9099612914B897005F47F5 /* AppDelegate.swift */; };
 		2B9099642914B897005F47F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9099632914B897005F47F5 /* SceneDelegate.swift */; };
 		2B9099692914B897005F47F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B9099672914B897005F47F5 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		2B3BBB6F29279D0B00743373 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2B3BBB7229279E4300743373 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
 		2B3BBB76292A938800743373 /* demoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoTableViewCell.swift; sourceTree = "<group>"; };
+		2B3BBB78292B3FBC00743373 /* demoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = demoTextView.swift; sourceTree = "<group>"; };
 		2B90995E2914B897005F47F5 /* learnSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = learnSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9099612914B897005F47F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B9099632914B897005F47F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				2B3BBB7229279E4300743373 /* MainHeaderView.swift */,
 				2B3BBB76292A938800743373 /* demoTableViewCell.swift */,
+				2B3BBB78292B3FBC00743373 /* demoTextView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			files = (
 				2B3BBB692927346300743373 /* LoginView.swift in Sources */,
 				2B9099622914B897005F47F5 /* AppDelegate.swift in Sources */,
+				2B3BBB79292B3FBC00743373 /* demoTextView.swift in Sources */,
 				2B3BBB77292A938900743373 /* demoTableViewCell.swift in Sources */,
 				2B3BBB6E29278E8A00743373 /* RegisterView.swift in Sources */,
 				2B3BBB7329279E4300743373 /* MainHeaderView.swift in Sources */,
