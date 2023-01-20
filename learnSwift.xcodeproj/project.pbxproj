@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1B51FF297A95B5003B245F /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B51FE297A95B5003B245F /* MainViewModel.swift */; };
+		2B1B5202297A97B9003B245F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B5201297A97B9003B245F /* SearchViewController.swift */; };
+		2B1B5204297A9EE6003B245F /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1B5203297A9EE6003B245F /* SearchViewModel.swift */; };
 		2B3BBB6729272D6500743373 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB6629272D6500743373 /* LoginViewController.swift */; };
 		2B3BBB692927346300743373 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB682927346300743373 /* LoginView.swift */; };
 		2B3BBB6B2927838C00743373 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3BBB6A2927838B00743373 /* RegisterViewController.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B1B51FE297A95B5003B245F /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		2B1B5201297A97B9003B245F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2B1B5203297A9EE6003B245F /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2B3BBB6629272D6500743373 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2B3BBB682927346300743373 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2B3BBB6A2927838B00743373 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B1B5200297A97AA003B245F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2B1B5201297A97B9003B245F /* SearchViewController.swift */,
+				2B1B5203297A9EE6003B245F /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		2B3BBB6C29278E7000743373 /* LRView */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +159,7 @@
 			children = (
 				2B9099612914B897005F47F5 /* AppDelegate.swift */,
 				2B9099632914B897005F47F5 /* SceneDelegate.swift */,
+				2B1B5200297A97AA003B245F /* Search */,
 				2BBA5872297A3EAA00808F12 /* Main */,
 				2BBA5871297A3E7000808F12 /* LR */,
 				2B9099672914B897005F47F5 /* Main.storyboard */,
@@ -185,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				2B3BBB6F29279D0B00743373 /* MainViewController.swift */,
+				2B1B51FE297A95B5003B245F /* MainViewModel.swift */,
 				2B3BBB7129279E2F00743373 /* MainView */,
 			);
 			path = Main;
@@ -372,9 +389,12 @@
 				2B3BBB7329279E4300743373 /* MainHeaderView.swift in Sources */,
 				2B3BBB6B2927838C00743373 /* RegisterViewController.swift in Sources */,
 				2B3BBB6729272D6500743373 /* LoginViewController.swift in Sources */,
+				2B1B5204297A9EE6003B245F /* SearchViewModel.swift in Sources */,
+				2B1B5202297A97B9003B245F /* SearchViewController.swift in Sources */,
 				2B9099642914B897005F47F5 /* SceneDelegate.swift in Sources */,
 				2B3BBB7029279D0B00743373 /* MainViewController.swift in Sources */,
 				2BBA5874297A3EE600808F12 /* SearchView.swift in Sources */,
+				2B1B51FF297A95B5003B245F /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

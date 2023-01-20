@@ -17,15 +17,8 @@ class MainHeaderView: UIView {
     return view
   }()
 
-  private var lineView: UIView = {
-    let view = UIView()
-    view.backgroundColor = .black
-    return view
-  }()
-
   private var avaterButton: UIButton = {
     let btn = UIButton()
-//    btn.setImage(UIImage.init(named: "m"), for: .normal)
     btn.setBackgroundImage(UIImage.init(named: "m"), for: .normal)
     btn.addTarget(self, action: #selector(touchAvater), for: .touchUpInside)
     btn.layer.cornerRadius = 20
@@ -51,24 +44,17 @@ class MainHeaderView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
 
-  func setupUI() {
+  private func setupUI() {
     addSubview(headerView)
     headerView.snp.makeConstraints { make in
       make.left.right.top.bottom.equalToSuperview()
-    }
-
-    addSubview(lineView)
-    lineView.snp.makeConstraints { make in
-      make.width.equalToSuperview()
-      make.height.equalTo(1)
-      make.top.equalTo(headerView.snp_bottom)
     }
 
     headerView.addSubview(avaterButton)
     avaterButton.snp.makeConstraints { make in
       make.left.equalTo(headerView.snp_left).offset(18)
       make.height.width.equalTo(40)
-      make.bottom.equalTo(lineView.snp_top).offset(-5)
+      make.bottom.equalToSuperview().offset(-5)
     }
 
     headerView.addSubview(nameLabel)
@@ -80,9 +66,7 @@ class MainHeaderView: UIView {
     }
   }
 
-  func renderUI() {
-
-  }
+  func renderUI() {}
 
   @objc func touchAvater() {
     print("touchAvater")
